@@ -14,9 +14,7 @@ hashUrl = Digest::SHA1.hexdigest(url)[0..7]
 
 #Ref https://www.rubyguides.com/2015/05/working-with-files-ruby/
 # Ref Open mode: https://www.rubydoc.info/stdlib/core/IO:initialize
-File.open("urls.csv", "a+") do |f|    
-    f.write("#{hashUrl},#{url}\n")
-end
+File.write("urls.csv", "#{hashUrl},#{url}\n", mode: "a+")
 
 # ref http://ruby-for-beginners.rubymonstas.org/bonus/string_interpolation.html
 puts "A sua url curta é: #{prefix}/#{hashUrl}"
