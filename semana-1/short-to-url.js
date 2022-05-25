@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const prefix = 'shorter.app'
+const prefix = process.env.APP_WEBSITE || 'shorter.app'
 const SHORT_URL_KEY_POSITION = 0
 const ORIGINAL_URL_POSITION = 1
 

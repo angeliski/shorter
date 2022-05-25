@@ -1,7 +1,7 @@
 const crypto = require("crypto")
 const fs = require('fs');
 
-const prefix = 'shorter.app'
+const prefix = process.env.APP_WEBSITE || 'shorter.app'
 
 // Ref https://nodejs.dev/learn/accept-input-from-the-command-line-in-nodejs
 const readline = require('readline').createInterface({
